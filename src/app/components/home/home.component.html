@@ -1,10 +1,10 @@
 
-
       <div class="container" >
-        <p-table #dt [columns]="cols" [value]="countryStat" [responsive]="false" 
-        [scrollable]="true" scrollHeight="500px" 
+        <p-table #dt [columns]="cols" [value]="countryStat"  
+        [scrollable]="true" [style]="{'min-width':'500px'}"
           [loading]="loading">
           <ng-template pTemplate="caption">
+
               <div >
                 <input type="input"  placeholder="Search Country" name="name" id='name'
                   (input)="dt.filterGlobal($event.target.value,'contains')" />
@@ -13,7 +13,7 @@
           </ng-template>
           <ng-template pTemplate="header" let-columns>
             <tr>
-              <th *ngFor="let col of columns">
+              <th *ngFor="let col of columns" >
                 {{col.header}}
               </th>
             </tr>
