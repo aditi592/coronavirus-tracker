@@ -10,6 +10,12 @@ export class HomeComponent implements OnInit {
   globalStat: any;
   countryStat: any;
   cols: any[];
+
+  
+  first = 0;
+
+  rows = 12;
+
   loading = true;
   constructor(private dataService:DataService) { }
 
@@ -43,5 +49,26 @@ export class HomeComponent implements OnInit {
         el.scrollIntoView({behavior: 'smooth', block: 'center', inline: 'nearest'}), 0);
     }
   }
+  
+  next() {
+    this.first = this.first + this.rows;
+}
+
+prev() {
+    this.first = this.first - this.rows;
+}
+
+reset() {
+    this.first = 0;
+}
+
+isLastPage(): boolean {
+    return this.first === (this.countryStat.length - this.rows);
+}
+
+isFirstPage(): boolean {
+    return this.first === 0;
+}
+
 
 }

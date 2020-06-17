@@ -1,0 +1,18 @@
+div,body .ui-table .ui-table-thead {
+    padding: 0.571em 0.857em;
+    border: 1px solid #c8c8c8;
+    font-weight: 700;
+    color: #333333;
+    background-color : #C39BD3;
+}
+
+th{
+    background-color : #C39BD3 !important;
+}
+
+tr:nth-child(even) {
+    background: #D7BDE2  !important;
+}
+tr:nth-child(odd) {
+    background: #EBDEF0 !important;
+}
