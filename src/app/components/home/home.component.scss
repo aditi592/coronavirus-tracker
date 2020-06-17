@@ -3,7 +3,7 @@ div,body .ui-table .ui-table-thead {
     border: 1px solid #c8c8c8;
     font-weight: 700;
     color: #333333;
-    background-color : #C39BD3;
+    background-color :white;
 }
 
 th{
@@ -15,4 +15,11 @@ tr:nth-child(even) {
 }
 tr:nth-child(odd) {
     background: #EBDEF0 !important;
+}
+
+.navbar{
+   width:100%;
+}
+.container{
+    max-width: 100%;
 }
