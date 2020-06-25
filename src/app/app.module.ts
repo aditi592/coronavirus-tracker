@@ -7,11 +7,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import {DataService} from './services/data.service';
 import { TableModule } from 'primeng/table';
+import { CountryComponent } from './components/country/country.component';
+import { GlobalComponent } from './components/global/global.component';
+import { IndiaComponent } from './components/india/india.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CountryComponent,
+    GlobalComponent,
+    IndiaComponent
   ],
   imports: [
     BrowserModule,

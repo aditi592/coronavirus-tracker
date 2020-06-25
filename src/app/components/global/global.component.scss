@@ -24,8 +24,13 @@ tr:nth-child(odd) {
     max-width: 100%;
 }
 
-section{
-    background: url(/assets/corona.jpg) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
+
+.alert-info {
+    color: #0c5460;
+    background-color: #D7BDE2  !important;
+    border-color: #bee5eb;
+}
+h4{
+    text-align: center;
+   
 }

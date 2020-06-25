@@ -1,0 +1,45 @@
+div,body  {
+    padding: 0.400em 0.2em;
+    border: 1px solid #F1D4D4;
+    font-weight: 700;
+    color:#484C7F;
+    background-color :white;
+    width: 100%;
+}
+
+.container{
+    background-color: #66487f;
+    width: 100%;
+    min-width:'500px';
+}
+
+.navbar{
+   width:100%;
+}
+.container{
+    max-width: 100%;
+    
+}
+
+
+.nav-item{
+    background-color: #C39BD3;
+    border: none;
+   
+    
+}
+
+.nav-item a{
+    color: #000000;
+    font-weight: bold;
+}
+
+.nav-item a:hover{
+    background-color: #e0ced6;
+    color:#337099 ;
+    border: solid 0.5px  #197b88;
+}
+
+.brand{
+    font-family: 'Arbutus', sans-serif;
+}

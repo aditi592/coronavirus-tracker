@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   globalStat: any;
   countryStat: any;
   cols: any[];
-
+  colls: any[];
   
   first = 0;
 
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
       console.log('country', this.countryStat);
       this.loading = false
     });
-
+    this.colls = [{ field: 'active_cases' }];
     this.cols = [
       { field: 'country_name', header: 'Country' },
       { field: 'cases', header: 'Cases' },
