@@ -1,0 +1,22 @@
+<div  role="alert" [style]="{'min-width':'500px'}">
+    <h4 class="alert-heading s">Selected Country</h4>
+
+    <p-table [value]="country" [style]="{'min-width':'500px'}">
+        <ng-template pTemplate="header">
+        <tr>
+            <th>Country</th>
+            <th>Actions</th>
+        </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-name>
+            <tr>
+                <td>
+                   {{name}}
+                </td>
+                <td>
+                    <button id="remove" (click)="deleteRow(name)">Delete</button>
+                </td>
+           </tr>
+        </ng-template>
+        </p-table>
+</div>

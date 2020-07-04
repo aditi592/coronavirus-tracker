@@ -1,12 +1,14 @@
-ADITI
 
 <div class="alert alert-info" role="alert" [style]="{'min-width':'500px'}">
   <h4 class="alert-heading s">Country Corona Count</h4>
+
+
     <p-table #dt [columns]="cols" [value]="countryStat"  
     [scrollable]="true" [style]="{'min-width':'500px'}"
-      [loading]="loading"
-      [paginator]="true" [rows]="12" [showCurrentPageReport]="true"
+      [loading]="loading" [(selection)]="selectedValues" 
+      [paginator]="true" [rowHover]="true" [rows]="12" [showCurrentPageReport]="true"
 currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+
       <ng-template pTemplate="caption">
 
         <div class="ui-table-caption ui-widget-header">
@@ -17,18 +19,42 @@ currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
       </ng-template>
       <ng-template pTemplate="header" let-columns>
         <tr>
+          <th style="width:2.25 em" >
+            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+        
           <th *ngFor="let col of columns" >
             {{col.header}}
           </th>
+          <th>
+            Action
+          </th>
         </tr>
       </ng-template>
-      <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <ng-template pTemplate="body" let-rowData let-columns="columns" >
         <tr>
+          <td>
+            <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+        </td>
           <td  *ngFor="let col of columns">
             <span class="ui-g">
               {{rowData[col.field]}}
             </span>
           </td>
+          <td style="text-align: center;font-size: 1.5em">
+            <button pButton type="button" label="Save" (click)="confirm1(rowData)"></button>
+          </td>
         </tr>
       </ng-template>
+      <ng-template pTemplate="summary">
+        <ul>
+            <li *ngFor="let country of selectedValues" style="text-align: left">
+                You have Selected :{{country.country_name + ' , ' + "Cases  " +country.cases + ' , ' +
+             "Deaths "+ country.deaths + ' , ' +"Recovered "+ country.total_recovered +' , ' + "New Cases "+country.new_cases 
+              + ' , ' +"New Deaths "+
+            country.new_deaths}}
+            </li>
+
+        </ul>
+    </ng-template>
     </p-table>
